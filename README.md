@@ -19,9 +19,16 @@ It supports:
 ---
 
 ## **Project Structure**
-├── StringCalculator.js        # Main implementation
-├── StringCalculator.test.js   # Test cases
-├── README.md                  # Project documentation
+1. ├── StringCalculator.js        # Main implementation
+2. ├── StringCalculator.test.js   # Test cases
+3. ├── README.md                  # Project documentation
 
 ---
+
+## **How to Run**
+### **1. Clone the Repository**
+1. git clone https://github.com/manoj-kumar-vst-au4/string-calculator-tdd.git
+2. cd string-calculator-tdd
+3. node StringCalculator.test.js
+
 
