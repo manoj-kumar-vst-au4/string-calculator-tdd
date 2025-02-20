@@ -20,6 +20,11 @@ class StringCalculator {
       return numArray.reduce((sum, num) => sum + num, 0);
     }
   }
-  
+  const calculator = new StringCalculator();
+  console.log(calculator.add("1,5"));
+  console.log(calculator.add("//;\n1;2"));
+  console.log(calculator.add("1\n2,3"));
+  console.log(calculator.add("1"));
+  console.log(calculator.add(""));
   
   module.exports = StringCalculator; // Export the class for testing
