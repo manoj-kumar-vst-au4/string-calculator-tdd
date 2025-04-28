@@ -24,4 +24,15 @@ describe('StringCalculator', () => {
     expect(calculator.add('1,2,3,4,5')).toBe(15);
   });
   
+  test('should ignore empty values between delimiters', () => {
+    expect(calculator.add('1,,2')).toBe(3); // treating empty between commas as 0
+  });
+
+  test('should throw an exception when a negative number is provided', () => {
+    expect(() => calculator.add('1,-2')).toThrow('negative numbers not allowed: -2');
+  });
+
+  test('should list all negative numbers in the exception message', () => {
+    expect(() => calculator.add('1,-2,-5,3')).toThrow('negative numbers not allowed: -2, -5');
+  });
 });
