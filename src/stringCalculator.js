@@ -1,9 +1,11 @@
 class StringCalculator {
     add(numbers) {
       if (!numbers) return 0;
-  
+
+      let delimiter = /,|\n/;
+
       const numList = numbers
-        .split(',')
+        .split(delimiter)
         .filter(n => n !== '')
         .map(Number);      
 

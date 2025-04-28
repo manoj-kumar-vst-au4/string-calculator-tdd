@@ -35,4 +35,10 @@ describe('StringCalculator', () => {
   test('should list all negative numbers in the exception message', () => {
     expect(() => calculator.add('1,-2,-5,3')).toThrow('negative numbers not allowed: -2, -5');
   });
+
+  test('should handle newlines between numbers along with commas', () => {
+    expect(calculator.add('1\n2,3')).toBe(6);
+    expect(calculator.add('4\n5\n6')).toBe(15);
+  });
+
 });
