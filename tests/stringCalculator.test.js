@@ -41,4 +41,12 @@ describe('StringCalculator', () => {
     expect(calculator.add('4\n5\n6')).toBe(15);
   });
 
+  test('should support custom single-character delimiter', () => {
+    expect(calculator.add('//;\n1;2')).toBe(3);
+    expect(calculator.add('//#\n2#3#4')).toBe(9);
+  });
+
+  test('should support custom delimiter with newlines inside numbers', () => {
+    expect(calculator.add('//-\n1-2\n3')).toBe(6);
+  });
 });
